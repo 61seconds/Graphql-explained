@@ -18,6 +18,6 @@ RUN npm i
 EXPOSE 8077
 
 # Execute at run-time
-CMD [npm start]
+CMD npm start
 
 
