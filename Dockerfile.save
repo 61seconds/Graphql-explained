@@ -1,7 +1,7 @@
 # Use node 10.13 LTS
 FROM node:10.13
 
-# Copy source code
+#copy source code
 COPY /graphiql graphiql 
 # Change working directory
 WORKDIR /graphiql
@@ -14,10 +14,8 @@ RUN npm i && npm run build
 WORKDIR /graphiql/example 
 RUN npm i
 
-# expose port
+## INFO - uncomment file below for no image, just running container
+#RUN npm start
+
+#expose port
 EXPOSE 8077
-
-# Execute at run-time
-CMD [npm start]
-
-
